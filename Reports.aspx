@@ -1,18 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.master" AutoEventWireup="true" CodeFile="Reports.aspx.cs" Inherits="Reports" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin.master" AutoEventWireup="true" CodeFile="Reports.aspx.cs" Inherits="Reports" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <br />
-    <br />
-    <br />
-    <br />
-<div align="center">
-    <asp:GridView ID="GridView1" runat="server" Width="625px" 
-    AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" 
-    DataKeyNames="ResultId" DataSourceID="SqlDataSource1">
+<div class="table-responsive" align="center">
+    <asp:GridView ID="GridView1" runat="server" Width="100%" 
+    AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
         <Columns>
-            <asp:BoundField DataField="ResultId" HeaderText="ID" ReadOnly="True" 
+            <asp:BoundField DataField="ResultId" HeaderText="ResultId" 
                 SortExpression="ResultId" />
             <asp:BoundField DataField="UserName" HeaderText="UserName" 
                 SortExpression="UserName" />
@@ -20,7 +15,7 @@
                 SortExpression="SubjectName" />
             <asp:BoundField DataField="TestDate" HeaderText="TestDate" 
                 SortExpression="TestDate" />
-            <asp:BoundField DataField="NumberOfQuestions" HeaderText="Number Of Questions" 
+            <asp:BoundField DataField="NumberOfQuestions" HeaderText="NumberOfQuestions" 
                 SortExpression="NumberOfQuestions" />
             <asp:BoundField DataField="Marks" HeaderText="Marks" SortExpression="Marks" />
             <asp:BoundField DataField="Status" HeaderText="Status" 
@@ -31,7 +26,6 @@
 <br />
 <br />
 <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-    ConnectionString="Data Source=asus;Initial Catalog=OnlineExamSystem;Integrated Security=True" 
-    ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [tblResult]">
+    ConnectionString="<%$ ConnectionStrings:teststring %>" SelectCommand="SELECT * FROM [tblResult]">
 </asp:SqlDataSource>
 </asp:Content>

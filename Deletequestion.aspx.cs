@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data.SqlClient;
-using System.Configuration;
-using System.Data;
 
 public partial class Deletequestion : System.Web.UI.Page
 {
@@ -16,7 +15,7 @@ public partial class Deletequestion : System.Web.UI.Page
     {
         if (!(Session["Username"] != null) && (Session["Usertype"].ToString() == "Admin"))
         {
-            Response.Redirect("Home.aspx");
+            Response.Redirect("Default.aspx");
         }
     }
 

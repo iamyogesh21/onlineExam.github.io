@@ -2,303 +2,71 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head runat="server">
-     <title>Online Examination System</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0,">
+    <title>Online Examination System</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-
-  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
-  <link rel="stylesheet" href="fonts/icomoon/style.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/jquery-ui.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-
-  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-
-  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-
-  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-
-  <link rel="stylesheet" href="css/aos.css">
-  <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
-
-  <link rel="stylesheet" href="css/style.css">
-  
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
     <style>
-         .navbar-mob {
-            background-color: white;
-        }
-        
-        .navbar>a {
-            color: #fff;
-            font-size: 30px;
-            text-decoration: none;
-            padding: 5px 5px 5px 10px;
-            float: left;
-        }
-        
-        .navbar>ul {
-            list-style: none;
-            float: right;
-        }
-        
-        .navbar-mob>ul {
-            list-style: none;
-        }
-        
-        .navbar>ul>li {
-            display: block;
-            line-height: 30px;
-            /*top-bottom right-left*/
-            padding: 0px 10px;
-        }
-        
-        .navbar-mob>ul>li {
-            line-height: 90px;
-            /*top-bottom right-left*/
-            padding: 0px 20px;
-            text-align: center;
-            display: block;
-            width: 100%;
-        }
-        
-       
-        
-        .navbar>ul>li>a,
-        .navbar-mob>ul>li>a {
-            text-decoration: none;
-            color: #000;
-            font-size: 18px;
-        }
-        
-        .navbar>ul>li:hover,
-        .navbar-mob>ul>li:hover {
-            background-color:#06ad1b;
-        }
-        
-        .navbar::after {
-            content: " ";
-            display: block;
-            clear: both;
-            *zoom: 1;
-        }
-        
-        .navbar-mob,
-        .hamburger-btn {
-            display: none;
-        }
-        
-        @media screen and (max-width: 992px) {
-            .navbar-mob,
-            .hamburger-btn {
-                display: block;
-            }
-            #mob-menu {
-                display: none;
-            }
-            .hamburger-btn>.fa-times {
-                display: none;
-            }
-            .navbar>ul {
-                display: none;
-            }
-            .fa-bars {
-                position: absolute;
-                z-index: 1;
-                top: 20px;
-                right: 20px;
-                font-size: 30px;
-            }
-            .fa-times {
-                position: absolute;
-                z-index: 2;
-                top: 20px;
-                right: 20px;
-                font-size: 30px;
-            }
-        }
-        @media screen and (max-width:992px){
-            .ml-auto > .social-wrap{
-                display:none;
-            }
-        }
+        .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #183661;
+   color: white;
+   text-align: center;
+}
     </style>
-
-
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
+        <nav class="navbar navbar-dark">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="Default.aspx"><h2>EXAMINATION</h2></a>
+    </div>
+    <ul class="nav navbar-nav" style="margin-left:100px;color:#06ad1b; padding-top:30px;">
+      <li class="active"><a href="Default.aspx">Home</a></li>
+      <li><a href="StartTest.aspx">Start Test</a></li>
+      <li><a href="Result.aspx">Result</a></li>
+      <li><a href="Contact.aspx">Contact Us</a></li>
+      <li><a href="AboutUs.aspx">About Us</a></li>
+      <li><a href="Register.aspx">Register</a></li>
+        <li><asp:LinkButton ID="lnkLogin" CssClass="textdecor" runat="server" ForeColor="#2A75A8" 
+                        onclick="lnkLogin_Click">Login</asp:LinkButton></li>
+      <li><asp:LinkButton ID="lnkLogout" CssClass="textdecor" runat="server" ForeColor="#2A75A8" 
+                        onclick="lnkLogout_Click" CausesValidation="False">Logout</asp:LinkButton></li>
+    </ul>
+  </div>
+</nav>
     <div>
-        <div class="site-wrap">
-
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div>
-
-
-    <div class="py-2 bg-light">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-9 d-none d-lg-block">
-            <!--<a href="#" class="small mr-3"><span class="icon-question-circle-o mr-2"></span> Have a questions?</a> !-->
-            <a href="tel:+00 00 000 0000" class="small mr-3"><span class="icon-phone2 mr-2"></span> 00 00 000 0000</a> 
-            <a href="mailto:admin@admin.com" class="small mr-3"><span class="icon-envelope-o mr-2"></span> admin@admin.com</a> 
-          </div>
-          <div class="col-lg-3 text-right">
-              <asp:LinkButton ID="lnkLogin" CssClass="textdecor" runat="server" ForeColor="#00ff00" 
-                        onclick="lnkLogin_Click" PostBackUrl="~/Home.aspx">Login</asp:LinkButton>
-              <asp:LinkButton ID="lnkLogout" CssClass="textdecor" runat="server" ForeColor="#00ff00"
-                        onclick="lnkLogout_Click" CausesValidation="False">Logout</asp:LinkButton>
-           
-            <a href="Register.aspx" class="small btn btn-primary px-4 py-2 rounded-0"><span  class="icon-users"></span> Register</a>
-          </div>
-        </div>
-      </div>
-    </div>
-      <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
-      <div class="container">
-        <div class="d-flex align-items-center">
-          <div class="site-logo">
-            <a href="default.aspx" class="d-block">
-               <h4 style="color:#06ad1b;">EXAMINATION</h4>
-            </a>
-          </div>
-          <div class="mr-auto">
-           <nav class="navbar site-navigation position-relative text-right">
-              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block"> 
-                <li><a href="default.aspx" class="nav-link text-left">Home</a> </li>
-               <li><a href="Skilltest.aspx" class="nav-link text-left">Start Test</a></li>
-                <li><a href="Result.aspx" class="nav-link text-left">Result</a></li>
-               <li class="has-children">
-                  <a href="#" class="nav-link text-left">More</a>
-                  <ul class="dropdown">
-                    <li><a href="Contact.aspx">Contact</a></li>
-                    <li><a href="AboutUs.aspx">About Us</a></li>
-                    <li><a href="OurGoal.aspx">Our Goal</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="ml-auto">
-            <div class="social-wrap">
-              <a href="https://github.com/ys351/Online-Examination-System/" target="_blank"><span class="icon-github"></span></a>
-              <a href="http://www.instagram.com/im.yogesh_?r=nametag" target="_blank"><span class="icon-instagram"></span></a>
-            </div>
-              <nav class="navbar-mob">
-                        <div class="hamburger-btn">
-                            <i class="fas fa-bars" id="bar" onclick="showMenu()"></i>
-                            <i class="fas fa-times" id="times" onclick="closeMenu()"></i>
-                        </div>
-
-                        <ul id="mob-menu">
-                            <li><a href="default.aspx">Home</a></li>
-                            <li><a href="Skilltest.aspx">Start Test</a></li>
-                            <li><a href="Result.aspx">Result</a></li>
-                            <li><a href="Contact.aspx">Contact</a></li>
-                            <li><a href="OurGoal.aspx">Our Goals</a></li>
-                            <li><a href="AboutUs.aspx">About Us</a></li>
-                        </ul>
-               </nav>
-          </div>
-        
-            </div>
-          </div>
-    </header>
-          <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
-    <div class="footer">
+    </div>
+  
+ <div class="footer">
       <div class="container">
         <div class="row">
           <div class="col-12">
-             <div class="social-links-warp">
-			<div class="container">
-				<div class="social-links">
-                    <h2>Follow On</h2>
-					<a href="http://www.instagram.com/im.yogesh_?r=nametag"target="_blank" class="instagram"><i class="icon-instagram"></i>&nbsp;<span>Instagram</span></a>&nbsp;&nbsp;
-					<a href="https://aboutme.google.com/u/0/?referer=gplus"target="_blank" class="google-plus"><i class="icon icon-google-plus">&nbsp;</i><span>Google Plus</span></a>&nbsp;&nbsp;
-					<a href="https://in.pinterest.com/login/" target="_blank"class="pinterest"><i class="icon-pinterest"></i>&nbsp;<span>Pinterest</span></a>&nbsp;&nbsp;
-					<a href="https://www.facebook.com/" target="_blank" class="facebook"><i class="icon-facebook"></i>&nbsp;<span>Facebook</span></a>&nbsp;&nbsp;
-					<a href="https://twitter.com/login"target="_blank" class="twitter"><i class="icon-twitter"></i>&nbsp;<span>Twitter</span></a>&nbsp;&nbsp;
-					<a href="https://www.youtube.com/account"target="_blank" class="youtube"><i class="icon-youtube"></i>&nbsp;<span>YouTube</span></a>&nbsp;&nbsp;
-					<a href="https://www.tumblr.com/login"target="_blank" class="tumblr"><i class="icon-tumblr-square"></i>&nbsp;<span>Tumblr</span></a>&nbsp;&nbsp;
-				</div>
+              <div class="social-links-warp">
             <div class="copyright" align="center">
-                <p>
-                 
+                <p>             
                  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Website is made by <u>Yogesh Singh</u>
                 </p>
             </div>
-          </div>
         </div>
       </div>
     </div>
-    </div>
-
   </div>
-  <!-- .site-wrap -->
-
-
-  <!-- loader -->
-  <div id="loader" class="show fullscreen">
-  <svg class="circular" width="48px" height="48px">
-  <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
-  <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#51be78"/>
-  </svg>
-  </div>
-
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/jquery.countdown.min.js"></script>
-  <script src="js/bootstrap-datepicker.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
-  <script src="js/jquery.sticky.js"></script>
-  <script src="js/jquery.mb.YTPlayer.min.js"></script>
-
-
-  <script>
-        function showMenu() {
-            var b = document.getElementById("bar");
-            var t = document.getElementById("times");
-            var m = document.getElementById("mob-menu");
-            b.style.display = "none";
-            t.style.display = "block";
-            m.style.display = "block";
-        }
-
-        function closeMenu() {
-            var b = document.getElementById("bar");
-            var t = document.getElementById("times");
-            var m = document.getElementById("mob-menu");
-            b.style.display = "block";
-            t.style.display = "none";
-            m.style.display = "none";
-        }
-  </script>
-
-
-  <script src="js/main.js"></script>
-    </div>
+   </div>
     </form>
 </body>
 </html>

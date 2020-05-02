@@ -3,11 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <br />
-    <br />
+        <hr />
 <div>
-     <div class="site-section ftco-subscribe-1 site-blocks-cover pb-4" style="background-image: url('images/bg_1.jpg')">
-        <div class="container" align="center">
+     <div class="site-section ftco-subscribe-1 site-blocks-cover pb-10">
+        <div class="container" align="left">
           <div class="row align-items-end" >
             <div class="col-lg-7">
               <h2 class="mb-0">Contact</h2>
@@ -16,6 +15,7 @@
           </div>
         </div>
       </div> 
+    <hr />
      <div class="site-section">
         <div class="container">
             <div class="row">
@@ -33,7 +33,7 @@
             <div class="row">
                 <div class="col-md-6 form-group">
                     <label for="eaddress">Email Address</label>
-                    <asp:TextBox ID="TextBox3" runat="server" class="form-control form-control-lg" TextMode="Email"></asp:TextBox>
+                    <asp:TextBox ID="TextBox3" runat="server" class="form-control form-control-lg"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox3" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                   
                 </div>
@@ -62,4 +62,6 @@
         </div>
     </div>
     </div>
+    <br />
+    <br />
 </asp:Content>

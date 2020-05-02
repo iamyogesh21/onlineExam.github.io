@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.master" AutoEventWireup="true" CodeFile="AdminHome.aspx.cs" Inherits="AdminHome" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin.master" AutoEventWireup="true" CodeFile="AdminHome.aspx.cs" Inherits="AdminHome" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -15,7 +15,7 @@
         </td>
         <td>
             &nbsp;</td>
-        <td colspan="2">
+        <td colspan="1">
             <asp:DropDownList ID="ddlSubject" runat="server" DataSourceID="SqlDataSource1" 
                 DataTextField="SubjectName" DataValueField="SubjectName">
             </asp:DropDownList>
@@ -50,8 +50,8 @@
         <td>
             &nbsp;</td>
         <td colspan="2">
-            <asp:TextBox ID="txtQuestion" runat="server" Height="53px" TextMode="MultiLine" 
-                Width="351px"></asp:TextBox>
+            <asp:TextBox ID="txtQuestion" runat="server" TextMode="MultiLine" 
+                ></asp:TextBox>
         </td>
         <td>
             <asp:RequiredFieldValidator runat="server" ControlToValidate="txtQuestion" 
@@ -183,7 +183,7 @@
             &nbsp;</td>
         <td align="right">
             <asp:ImageButton ID="ImageButton7" runat="server" 
-                ImageUrl="~/Images/add_details.png"  OnClick="Button1_Click" />
+                ImageUrl="~/Images/adddetails.png"  OnClick="Button1_Click" />
         </td>
         <td>
             &nbsp;</td>

@@ -1,13 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.master" AutoEventWireup="true" CodeFile="TestSettings.aspx.cs" Inherits="TestSettings" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin.master" AutoEventWireup="true" CodeFile="TestSettings.aspx.cs" Inherits="TestSettings" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    
-<br />
-<br />
-<br />
-    <table>
+  <table align="center">
         <tr>
             <td>
                 &nbsp;</td>
@@ -75,22 +71,7 @@
     </table>
     <br />
 <br />
-<br /><br />
+
 <br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+
 </asp:Content>

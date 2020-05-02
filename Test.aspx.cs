@@ -1,13 +1,13 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data.SqlClient;
-using System.Configuration;
-using System.Data;
-using System.Collections;
 
 public partial class Test : System.Web.UI.Page
 {
@@ -21,7 +21,7 @@ public partial class Test : System.Web.UI.Page
     SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["teststring"].ConnectionString);
     string selected, subject_name, Result = null, UserName = null;
     static String CrtAns = null, ChoiceType = null;
-    string con_str = "Data Source=DELL-PC;Initial Catalog=OnlineExamSystem;Integrated Security=True";
+    string con_str = "Data Source=asus;Initial Catalog=OnlineExamSystem;Integrated Security=True";
     DataTable dt;
     DataSet ds;
     SqlDataAdapter ad;

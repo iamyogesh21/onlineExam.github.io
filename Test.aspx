@@ -3,12 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
 
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
@@ -28,8 +22,8 @@
                     </td>
                 </tr>
             </table>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Panel ID="pnlQuest" runat="server" 
-                Height="316px" style="margin-left: 40px;" Width="688px">
+            <asp:Panel ID="pnlQuest" runat="server" 
+                style="margin-left: 0px;" Width="100%">
                 <asp:Label ID="lblQuestion" runat="server" ForeColor="#0066FF"></asp:Label>
                 <br />
                 <br />
@@ -62,7 +56,7 @@
                         </td>
                         <td>
                             <asp:ImageButton ID="img_Start" runat="server" ImageUrl="~/Images/start.gif" 
-                                OnClick="img_Start_Click1" style="height: 19px" />
+                                OnClick="img_Start_Click1" style="height: 30px" />
                         </td>
                     </tr>
                     <tr>
@@ -74,16 +68,14 @@
                 </table>
                 <br />
                 <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
-                    ConnectionString="Data Source=DELL-PC;Initial Catalog=OnlineExamSystem;Integrated Security=True" 
-                    ProviderName="System.Data.SqlClient" 
+                    ConnectionString="<%$ ConnectionStrings:DB_A5138B_yogesh88ConnectionString %>" 
                     SelectCommand="SELECT * FROM [tblQuestions]"></asp:SqlDataSource>
                 <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                
                 <br />
                 <br />
             </asp:Panel>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </ContentTemplate>
+            </ContentTemplate>
         <Triggers>
             <asp:AsyncPostBackTrigger controlid="Timer1" eventname="Tick" />
         </Triggers>

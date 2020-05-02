@@ -1,13 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.master" AutoEventWireup="true" CodeFile="AddSubject.aspx.cs" Inherits="AddSubject" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin.master" AutoEventWireup="true" CodeFile="AddSubject.aspx.cs" Inherits="AddSubject" %>
 
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <br />
+  <br />
      <div>
-    <table  align="center">
+    <table align="center">
         <tr>
             <td>
                 &nbsp;</td>
@@ -35,13 +35,13 @@
                 &nbsp;</td>
             <td>
                 <asp:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="0" 
-                    max-Width="482px" max-Height="207px">
+                    max-Height="207px">
                     <asp:TabPanel runat="server" HeaderText="Add Subject" ID="TabPanel1">
                         <HeaderTemplate>
                             Add Subject
                         </HeaderTemplate>
                         <ContentTemplate>
-                            <asp:Panel ID="pnlAdd" runat="server" max-Height="auto" max-Width="100%">
+                            <asp:Panel ID="pnlAdd" runat="server">
                                 <table>
                                     <tr>
                                         <td>
@@ -92,6 +92,15 @@
                                     <tr>
                                         <td >
                                             &nbsp;</td>
+                                        <td>
+                                         
+                                        </td>
+                                        <td>
+                                            &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td >
+                                            &nbsp;</td>
                                         <td >
                                             &nbsp;</td>
                                         <td>
@@ -102,12 +111,14 @@
                             </asp:Panel>
                         </ContentTemplate>
                     </asp:TabPanel>
+                    
                     <asp:TabPanel ID="TabPanel2" runat="server" HeaderText="Delete Subject">
+                        
                         <HeaderTemplate>
                             Delete Subject
                         </HeaderTemplate>
                         <ContentTemplate>
-                            <asp:Panel ID="pnlDelete" runat="server" max-Height="auto" max-Width="100%">
+                            <asp:Panel ID="pnlDelete" runat="server">
                                 <table>
                                     <tr>
                                         <td>
@@ -123,7 +134,7 @@
                                     <tr>
                                         <td  rowspan="2">
                                             &nbsp;</td>
-                                        <td style="width:200px;">
+                                        <td>
                                             <asp:Label ID="lblSubjectName" runat="server" Text="Subject Name"></asp:Label>
                                         </td>
                                         <td>
@@ -182,18 +193,19 @@
                 &nbsp;</td>
         </tr>
     </table>
-        <table align="center">
+         <div class="table-responsive" >
+        <table>
          <tr > <td colspan="2">
                                 &nbsp;</td>
             <td>
                                 <asp:GridView ID="GridView2" runat="server" AllowPaging="True" 
                                     AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" 
-                                    DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="350px"
+                                    DataSourceID="SqlDataSource1" ForeColor="#333333" Width="100%"
                                     Height="206px" PageSize="5">
                                     <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
                                     <Columns>
-                                        <asp:BoundField DataField="SubjectName" HeaderText=" &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Subject Name" 
-                                            SortExpression="SubjectName" />
+                                        <asp:BoundField DataField="SubjectName" HeaderText="Subject Name" 
+                                           SortExpression="SubjectName" />
                                     </Columns>
                                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                     <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
@@ -202,9 +214,8 @@
                                     <EditRowStyle BackColor="#999999" />
                                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                                 </asp:GridView>
-            </td></tr></table>
+            </td></tr></table></div>
     <br />
     <br />
          </div>
 </asp:Content>
-

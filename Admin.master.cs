@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Admin : System.Web.UI.MasterPage
+public partial class admin : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -28,10 +28,10 @@ public partial class Admin : System.Web.UI.MasterPage
     {
         Session["Username"] = null;
         Session.Abandon();
-        Response.Redirect("Home.aspx");
+        Response.Redirect("Default.aspx");
     }
     protected void lnkLogin_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Home.aspx");
+        Response.Redirect("Default.aspx");
     }
 }

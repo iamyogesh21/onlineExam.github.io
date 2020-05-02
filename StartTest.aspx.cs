@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Result : System.Web.UI.Page
+public partial class StartTest : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -15,5 +15,9 @@ public partial class Result : System.Web.UI.Page
             Response.Redirect("default.aspx");
 
         }
+    }
+    protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        Response.Redirect("Test.aspx?Subject_name=" + DataList1.SelectedValue.ToString().Trim());
     }
 }

@@ -1,21 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Forgotpassword.aspx.cs" Inherits="Forgotpassword" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
  <div id="ForgetDiv" align="center">
                             <table>
                                 <tr align="center">
                                     <th>
                                     </th>
                                     <th colspan="3">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         Forgot Password
                                     </th>
                                     <th>
@@ -125,9 +119,7 @@
                                     <td>
                                         &nbsp;</td>
                                     <td align="center" colspan="3">
-                                        <asp:ImageButton ID="imgChangePass" runat="server" 
-                                           OnClick="imgChangePass_Click" ImageUrl="~/Images/change_password.png" />
-                                    </td>
+                                        &nbsp;</td>
                                     <td>
                                         &nbsp;</td>
                                 </tr>
@@ -135,12 +127,28 @@
                                     <td>
                                         &nbsp;</td>
                                     <td align="center" colspan="3">
-                                        <asp:Label ID="lblForgetMessage" runat="server" ForeColor="#2A75A8"></asp:Label>
+                     <asp:Button ID="imgChangePass" runat="server" Text="Submit" class="btn btn-primary btn-lg px-5" OnClick="imgChangePass_Click"/>
+
+                                       
                                     </td>
                                     <td>
                                         &nbsp;</td>
                                 </tr>
                             </table>
+
+                            <table class="nav-justified">
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        <asp:Label ID="lblForgetMessage" runat="server" ForeColor="#2A75A8"></asp:Label>
+                                    </td>
+                                </tr>
+                            </table>
+
                         </div>
                         <br />
     <br />

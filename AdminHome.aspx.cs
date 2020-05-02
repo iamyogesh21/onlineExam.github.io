@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data.SqlClient;
-using System.Configuration;
+
 public partial class AdminHome : System.Web.UI.Page
 {
     SqlCommand cmd;
@@ -53,7 +54,7 @@ public partial class AdminHome : System.Web.UI.Page
         else
         {
             Session.Abandon();
-            Response.Redirect("Home.aspx");
+            Response.Redirect("default.aspx");
         }
     }
     protected void Button1_Click(object sender, EventArgs e)

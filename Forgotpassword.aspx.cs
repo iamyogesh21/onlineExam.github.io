@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Configuration;
-using System.Data.SqlClient;
 
 public partial class Forgotpassword : System.Web.UI.Page
 {
@@ -111,8 +111,7 @@ public partial class Forgotpassword : System.Web.UI.Page
             con.Close();
         }
     }
-
-    protected void imgChangePass_Click(object sender, ImageClickEventArgs e)
+    protected void imgChangePass_Click(object sender, EventArgs e)
     {
         String update = "Update tblUserDetails set Password ='" + txtNewpassword.Text.Trim() + "' where UserName = '" + Username + "'";
         try

@@ -3,10 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <br />
-    <br />
-    <br />
-    <br />
 <div align="center">
 <table>
         <tr>
@@ -271,8 +267,7 @@
                 &nbsp;
             </td>
             <td >
-                <asp:ImageButton ID="imgRegister" runat="server" OnClick="imgRegister_Click"
-                    ImageUrl="~/Images/register1.png" />
+            <asp:Button ID="imgRegister" runat="server" Text="Submit" class="btn btn-primary btn-lg px-5" OnClick="imgRegister_Click"/>
             </td>
             <td>
                 &nbsp;</td>
@@ -305,4 +300,3 @@
                 <asp:Label ID="lblSuccess" runat="server"></asp:Label></div>
 <br />
 </asp:Content>
-

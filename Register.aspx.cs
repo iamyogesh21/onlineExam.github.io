@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data.SqlClient;
-using System.Configuration;
-using System.Data;
+
 public partial class Register : System.Web.UI.Page
 {
-
     SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["teststring"].ConnectionString);
 
     SqlCommand command;
@@ -91,7 +90,7 @@ public partial class Register : System.Web.UI.Page
         txtEmailId.Text = "";
 
     }
-    protected void imgRegister_Click(object sender, ImageClickEventArgs e)
+    protected void imgRegister_Click(object sender, EventArgs e)
     {
         string AA = "User";
         String InsertUserDetails = "Insert into tblUserDetails(UserId,Firstname,Lastname,Username,Password,Email,PhoneNumber,SecurityQuestion,SecurityAnswer,Usertype) values(" + NewUserId + ",'" + txtFirstname.Text + "','" + txtLastname.Text + "','" + txtUsername.Text + "','" + txtPassword.Text + "','" + txtEmailId.Text + "','" + txtPhoneNumber.Text + "','" + drpSecurityQus.Text + "','" + txtSecurityAns.Text + "','" + AA + "')";
@@ -105,7 +104,7 @@ public partial class Register : System.Web.UI.Page
 
             //  Response.Write("The user Registration Success!");
             lblSuccess.Visible = true;
-            lblSuccess.Text = "Your Registration has been succefully completed. To start the test " + "<a href='Skilltest.aspx'>click here</a>";
+            lblSuccess.Text = "Your Registration has been succefully completed. To start the test " + "<a href='StartTest.aspx'>click here</a>";
             con.Close();
             ClearText();
 

@@ -1,27 +1,21 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="AboutUs.aspx.cs" Inherits="AboutUs" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="AboutUs.aspx.cs" Inherits="AboutUs" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-
+ <hr />
      <div class="row">
         <div class="col-md-12">
-           <div class="site-section ftco-subscribe-1 site-blocks-cover pb-10" style="background-image: url('images/aboutUs.jpg')">
-        <div class="container" align="center">
+           <div class="site-section ftco-subscribe-1 site-blocks-cover pb-10">
+        <div class="container" align="left">
           <div class="row align-items-end" >
-            <div class="col-lg-7">
+            <div class="col-lg-4">
               <h2 class="mb-0">About Us</h2>
             </div>
           </div>
         </div>
       </div> 
-            <div class="card-body">
+            <div class="container">
                 <p>In this project, we are going to make an online exam system where an admin can take exam for the current student who are logged in this system. Here, the admin will take the exam of objective type questions.</p>
                 <p>In admin section </p>
                 <ul>
